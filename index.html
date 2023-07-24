@@ -25,6 +25,16 @@
         .font-eb {
             font-family: 'EB Garamond', serif;
         }
+
+        .gradient {
+            background: linear-gradient(180deg, #111 0%, rgba(17, 17, 17, 0.00) 100%);
+        }
+
+        .bg-btn {
+            border-radius: 8px;
+            background: #B68C5A;
+            color: white;
+        }
     </style>
 
     <!-- TAILWIND CUSTOM COLOR -->
@@ -33,19 +43,76 @@
             theme: {
                 extend: {
                     colors: {
-                        'gradient-start': '#FF8938',
-                        'gradient-end': '#F00',
+                        'gradient-start': '#111111',
+                        'gradient-end': '#11111100'
                     }
                 }
             }
         }
     </script>
+
+    <!-- FONT AWESOME ICONS LINK -->
+    <script src="https://kit.fontawesome.com/13b995a34b.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="">
+<body class="font-p">
     <!-- HEADER SECTION START -->
-    <header class="container mx-auto">
+    <header class="container mx-auto pt-3">
+        <!-- NAVBAR SECTION -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <div class="text-sm ">
+                            <li><a>Home</a></li>
+                            <li><a>Documents</a></li>
+                            <li><a>Add Document</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost normal-case text-xl">
+                    <img class="w-8" src="./images/business.png" alt="Logo">
+                    Justice
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Service <i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a></li>
+                    <li><a>Class <i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a></li>
+                    <li><a>Blog <i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a></li>
+                    <li><a>Contact Us <i class="fa-solid fa-chevron-right" style="color: #000000;"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-btn">Free Consultation</a>
+            </div>
+        </div>
 
+        <!-- BANNER SECTION  -->
+        <div class="hero min-h-[calc(100vh-80px)] bg-[url('./images/banner.png')] gradient">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                        exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <div class="space-y-2">
+                        <input type="text" placeholder="Type here"
+                            class="input input-bordered input-md w-full max-w-xs" />
+                        <button class="btn bg-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- HEADER SECTION START -->
 
